@@ -1625,7 +1625,7 @@ with center:
 
             st.markdown("""
             <p style="color:#8b949e; font-size:13px;">
-                Download the template dataset, fill in your match data, and upload it here.
+                Download the template, fill in your match data, and upload it below.
             </p>
             """, unsafe_allow_html=True)
 
