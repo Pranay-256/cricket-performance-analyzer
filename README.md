@@ -4,6 +4,8 @@ A complete cricket analytics dashboard built with **Python, Pandas, NumPy, Matpl
 
 🔗 **Live Demo:** [t20-team-performance-analyzer.streamlit.app](https://t20-team-performance-analyzer.streamlit.app/)
 
+🎬 **Tutorial:** [Watch the video tutorial on YouTube](https://youtu.be/ltyEYDIfNWo)
+
 📄 A detailed write-up is available in [`Cricket_Performance_Analyzer_Documentation.pdf`](Cricket_Performance_Analyzer_Documentation.pdf).
 
 ---
