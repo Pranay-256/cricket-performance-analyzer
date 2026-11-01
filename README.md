@@ -1,6 +1,6 @@
 # 🏏 Cricket Team Performance Analyzer
 
-A complete cricket analytics dashboard built with **Python, Pandas, NumPy, Matplotlib, Seaborn and Streamlit**. Upload your match data and get batting, bowling, player-level and team-level insights in seconds, with no expensive software and no analytics background needed.
+A complete cricket analytics dashboard built with **Python, Pandas, NumPy, Matplotlib, Seaborn and Streamlit**. Upload your match data and get batting, bowling, player-level and team-level insights in seconds, with no expensive software and no analytics background needed. **Currently only supports T-20 Format**
 
 🔗 **Live Demo:** [t20-team-performance-analyzer.streamlit.app](https://t20-team-performance-analyzer.streamlit.app/)
 
@@ -340,7 +340,7 @@ cricket-performance-anlayzer/
 
 ## 👨‍💻 Author
 
-**Pranay Jha**, B.Tech in Computer Science and Engineering, learning and exploring Data Science, Data Analytics and Data Visualization.
+**Pranay Jha**
 
 - 🐙 GitHub: [Pranay-256](https://github.com/Pranay-256)
 - 💼 LinkedIn: [Pranay Jha](https://www.linkedin.com/in/pranay-jha-6582a937b/)
