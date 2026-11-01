@@ -1,6 +1,6 @@
-# 🏏 Cricket Team Performance Analyzer
+# 🏏 T20 Cricket Team Performance Analyzer
 
-A complete cricket analytics dashboard built with **Python, Pandas, NumPy, Matplotlib, Seaborn and Streamlit**. Upload your match data and get batting, bowling, player-level and team-level insights in seconds, with no expensive software and no analytics background needed. **Currently only supports T-20 Format**.
+A complete cricket analytics dashboard built with **Python, Pandas, NumPy, Matplotlib, Seaborn and Streamlit**. Upload your match data and get batting, bowling, player-level and team-level insights in seconds, with no expensive software and no analytics background needed.
 
 🔗 **Live Demo:** [t20-team-performance-analyzer.streamlit.app](https://t20-team-performance-analyzer.streamlit.app/)
 
@@ -15,7 +15,7 @@ Cricket is played at every level, but advanced performance analytics is availabl
 - **Gully cricket** and friendly matches
 - **Turf tournaments** and local leagues
 - **Inter-school** and **inter-college** tournaments
-- **Small tournaments**, including district-level and some state-level competitions
+- **Small tournaments**, including district-level and state-level competitions
 
 In these settings, players, coaches and associations usually have no access to advanced, costly cricket analytics tools. Performance is judged by memory, personal observation and a quick look at the scorecard. This creates several problems:
 
@@ -58,13 +58,18 @@ Using this tool:
 
 ## 📌 Project Overview
 
-The project began as an exploratory data analysis notebook, where the cleaning, feature engineering and analysis logic was built and validated. It was then converted into a fully interactive Streamlit web application with:
+The project began as a Jupyter notebook, where the data validation rules, cleaning, feature engineering and analysis logic were built and tested first. That logic was then converted into a fully interactive Streamlit web application with:
 
 - CSV and Excel upload (single or multiple files)
 - Automated data validation with descriptive error messages
 - Automated cleaning and feature engineering
 - Batting, Bowling, Player and Summary analytics
 - Interactive player selection and charts
+
+### 🤖 How It Was Built
+
+- **Notebook (`T20_Cricket_Team_Performance_Analysis.ipynb`):** the raw, unformatted version of the analysis, run on `match_data.csv`. It holds the validation rules, the cleaning steps, the feature engineering (strike rate, economy rate with overs converted to balls, consistency score, batting order and match phase) and every analysis and chart, so the logic can be tested and cross-checked before it goes into the app. It is kept in sync with `app.py`.
+- **Dashboard UI (`app.py`):** the Streamlit dashboard UI, including the tabs, KPI cards, charts layout and styling, was created with the help of **Claude AI**. The analytical logic behind it comes from the notebook, and the AI-generated code and outputs were reviewed and validated against it for accuracy.
 
 Each row of the dataset is one player's performance in one match. A ready-made example dataset ([`match_data.csv`](match_data.csv)) and a blank [`template.csv`](template.csv) are included in the repository and can also be downloaded from inside the app.
 
@@ -166,6 +171,8 @@ Project background, objective, tech stack, analytical approach and recent update
 | **Matplotlib** | Charts and plots |
 | **Seaborn** | Statistical and aesthetic visualizations |
 | **Streamlit** | Interactive web dashboard |
+| **Jupyter Notebook** | Building and validating the analysis logic |
+| **Claude AI** | Creating the Streamlit dashboard UI |
 
 ---
 
@@ -251,7 +258,7 @@ cricket-performance-anlayzer/
 ├── t20-cricket-team-performance-analysis/
 │   ├── app.py                                       # Streamlit application
 │   ├── requirements.txt                             # Python dependencies
-│   └── T20_Cricket_Team_Performance_Analysis.ipynb  # Raw analysis notebook
+│   └── T20_Cricket_Team_Performance_Analysis.ipynb  # Raw notebook: validation, cleaning, analysis
 │
 ├── Cricket_Performance_Analyzer_Documentation.pdf   # Detailed project documentation
 ├── match_data.csv                                   # Example dataset
@@ -340,7 +347,7 @@ cricket-performance-anlayzer/
 
 ## 👨‍💻 Author
 
-**Pranay Jha**
+**Pranay Jha**, B.Tech in Computer Science and Engineering, learning and exploring Data Science, Data Analytics and Data Visualization.
 
 - 🐙 GitHub: [Pranay-256](https://github.com/Pranay-256)
 - 💼 LinkedIn: [Pranay Jha](https://www.linkedin.com/in/pranay-jha-6582a937b/)
