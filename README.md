@@ -66,7 +66,7 @@ The project began as an exploratory data analysis notebook, where the cleaning, 
 - Batting, Bowling, Player and Summary analytics
 - Interactive player selection and charts
 
-Each row of the dataset is one player's performance in one match. A ready-made example dataset ([`match_data_fixed.csv`](match_data_fixed.csv)) and a blank [`template.csv`](template.csv) are included in the repository and can also be downloaded from inside the app.
+Each row of the dataset is one player's performance in one match. A ready-made example dataset ([`match_data.csv`](match_data.csv)) and a blank [`template.csv`](template.csv) are included in the repository and can also be downloaded from inside the app.
 
 ---
 
@@ -254,7 +254,7 @@ cricket-performance-anlayzer/
 │   └── T20_Cricket_Team_Performance_Analysis.ipynb  # Raw analysis notebook
 │
 ├── Cricket_Performance_Analyzer_Documentation.pdf   # Detailed project documentation
-├── match_data_fixed.csv                             # Example dataset
+├── match_data.csv                                   # Example dataset
 ├── template.csv                                     # Blank template dataset
 └── README.md
 ```
@@ -276,15 +276,15 @@ cricket-performance-anlayzer/
    pip install -r t20-cricket-team-performance-analysis/requirements.txt
    ```
 
-3. **Run the app from the repository root** (the app reads `template.csv` and `match_data_fixed.csv` from there)
+3. **Run the app from the repository root** (the app reads `template.csv` and `match_data.csv` from there)
 
    ```bash
    streamlit run t20-cricket-team-performance-analysis/app.py
    ```
 
-4. **Upload your data** in the Dataset tab, press **Confirm Upload**, and explore the other tabs. You can use `match_data_fixed.csv` to try it out.
+4. **Upload your data** in the Dataset tab, press **Confirm Upload**, and explore the other tabs. You can use `match_data.csv` to try it out.
 
-> **Notebook:** `T20_Cricket_Team_Performance_Analysis.ipynb` reads `match_data_fixed.csv` from its working directory. Run it from the repository root, or change the path to `../match_data_fixed.csv`.
+> **Notebook:** `T20_Cricket_Team_Performance_Analysis.ipynb` reads `match_data.csv` from its working directory. Run it from the repository root, or change the path to `../match_data.csv`.
 
 ---
 
@@ -332,6 +332,8 @@ cricket-performance-anlayzer/
 
 - ODI and Test match support
 - Opposition team analysis
+- Career player profiles
+- PDF report export
 - Match result correlation analysis
 
 ---
