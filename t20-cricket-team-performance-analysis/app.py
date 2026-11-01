@@ -1477,8 +1477,11 @@ def render_summary_tab(df2):
 
     runs_by_player = s["runs_by_player"]
     bowl_by_player = s["bowl_by_player"]
+    # same filters as the Batting / Bowling tabs: >= 10 balls faced, >= 2 overs (12 balls) bowled
     strike_rate = s["strike_rate"]
+    strike_rate = strike_rate[strike_rate["Balls_Played"] >= 10].reset_index(drop=True)
     economy = s["economy"]
+    economy = economy[economy["Balls_Bowled"] >= 12].reset_index(drop=True)
     runs_role = s["runs_role"]
     wickets_role = s["wickets_role"]
     order_runs = s["order_runs"]
