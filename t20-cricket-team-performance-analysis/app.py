@@ -1738,7 +1738,7 @@ with center:
 
             sub_heading("Example Dataset", margin="4px 0 10px 0")
 
-            st.download_button("⬇ Download Example Dataset", read_file_bytes("match_data_fixed.csv"), "match_data_fixed.csv")
+            st.download_button("⬇ Download Example Dataset", read_file_bytes("match_data.csv"), "match_data.csv")
 
             bottom_space()
 
@@ -1823,28 +1823,52 @@ with center:
             st.markdown("""
             <div style="font-family:'Rajdhani',sans-serif; font-size:14px;
                         color:#e6edf3; line-height:1.8; margin-bottom:10px;">
-                In many <strong style="color:#e0c070;">local cricket matches, school tournaments, inter-college
-                competitions, and community leagues</strong>, player performance is usually evaluated
-                <strong>manually or based on personal observation</strong>. This creates several limitations.
+                Advanced cricket analytics is available only at the top of the game. Professional teams use
+                expensive analytical tools and dedicated analysts, but the vast majority of players do not have
+                access to anything like it. In <strong style="color:#e0c070;">gully cricket, friendly and turf
+                tournaments, inter-school and inter-college competitions, and small district-level or
+                state-level tournaments</strong>, players, coaches and associations usually have
+                <strong>no access to advanced and costly cricket analytics tools</strong>.
+            </div>
+            <div style="font-family:'Rajdhani',sans-serif; font-size:14px;
+                        color:#e6edf3; line-height:1.8; margin-bottom:10px;">
+                As a result, performance is judged by <strong>memory, personal observation and a quick look at
+                the scorecard</strong>. Coaches cannot easily see where the team is losing wickets or which role
+                is contributing the most, and players cannot see how consistent they really are. This makes it
+                hard to build better strategies for future matches, and it also makes awards open to
+                <strong>bias, favouritism or even cheating</strong>, because there is no transparent data
+                behind the decision.
             </div>
             """, unsafe_allow_html=True)
 
             sub_heading("⚠️ Key Challenges", size=17, margin="8px 0", color="#c9a84c")
             card_list([
-                "Player contributions are often judged <strong>subjectively</strong>",
-                "Awards like <strong>Best Batsman / Bowler</strong> may not always be fairly decided",
+                "Player contributions are often judged <strong>subjectively</strong>, based on opinion rather than numbers",
+                "Awards like <strong>Best Batsman / Bowler</strong> may not be fairly decided, and can be influenced by bias or cheating",
                 "Bowling performance is usually evaluated <strong>only by wickets</strong>, ignoring economy rate",
+                "There is no way to measure <strong>player consistency</strong>, so one good match can hide an average player",
+                "Coaches cannot easily see <strong>where the team loses wickets</strong> or which batting order scores the most",
                 "<strong>Match-to-match comparison</strong> is difficult without proper records",
                 "Lack of a <strong>structured data system</strong> for multi-match analysis",
+                "Advanced analytics tools are <strong>expensive and complex</strong>, so grassroots teams cannot use them",
             ], border_color="#e05252")
 
         with st.expander("🎯 Objective", expanded=False):
             st.markdown("""
             <div style="font-family:'Rajdhani',sans-serif; font-size:14px;
                         color:#e6edf3; line-height:1.8; margin-bottom:10px;">
-                The main objective is to build a <strong style="color:#e0c070;">clear, structured, and unbiased
-                cricket performance analysis system</strong> using match-level data — replacing manual judgements
-                with <strong>data-driven insights</strong>.
+                The aim of this project is to provide a <strong style="color:#e0c070;">simple, free and easy-to-use
+                analytical tool</strong> that gives gully cricketers, local and school teams, coaches and small
+                tournament organizers the kind of team analysis that was earlier available only through advanced
+                and expensive tools — replacing manual judgements with <strong>data-driven insights</strong>.
+            </div>
+            <div style="font-family:'Rajdhani',sans-serif; font-size:14px;
+                        color:#e6edf3; line-height:1.8; margin-bottom:10px;">
+                Using this tool, <strong style="color:#e0c070;">players and coaches</strong> can analyze their team
+                performance effectively, find strengths and weaknesses, and create better strategies to perform
+                well in future matches. <strong style="color:#e0c070;">Organizations and associations</strong> can
+                give awards <strong>accurately and fairly</strong>, without any bias or cheating against any
+                player or in favour of another.
             </div>
             """, unsafe_allow_html=True)
 
@@ -1854,12 +1878,14 @@ with center:
                 "Evaluating <strong>bowling impact</strong> using wickets and economy rate",
                 "Measuring <strong>player consistency</strong> across multiple matches",
                 "Comparing performances between <strong>batsmen, bowlers, and all-rounders</strong>",
-                "Providing <strong>fair statistical summaries</strong> for team evaluation",
+                "Identifying team strengths and weaknesses, such as <strong>batting order strength and phase-wise wickets lost</strong>",
+                "Giving a <strong>detailed match-by-match view of every individual player</strong>",
+                "Providing <strong>fair statistical summaries</strong> for team evaluation and unbiased awards",
             ], border_color="#3fb950", prefix="✓ &nbsp;")
 
             sub_heading("🏏 Target Users", size=17, margin="8px 0", color="#c9a84c")
-            targets = ["Local cricket teams", "Gully cricket players", "School & college tournaments",
-                       "Small-scale cricket competitions", "Teams seeking simple data-based evaluation"]
+            targets = ["Gully cricket players", "Friendly & turf tournaments", "Inter-school & inter-college teams",
+                       "District & state level tournaments", "Players & coaches", "Associations & award committees"]
             cols = st.columns(3)
             for i, t in enumerate(targets):
                 with cols[i % 3]:
@@ -1908,6 +1934,7 @@ with center:
                 "Role-wise contribution",
                 "Batting consistency",
                 "Total and average runs by batting order",
+                "Phase-wise wickets lost",
             ])
 
             about_block("🎯 Bowling Analysis", [
@@ -1918,6 +1945,22 @@ with center:
                 "Average wickets by role",
                 "Economy rate comparison",
                 "Bowling consistency",
+            ])
+
+            about_block("👤 Player Analysis", [
+                "Player information: role, matches played and usual batting order",
+                "Batting KPIs: total runs, balls played, strike rate and batting consistency",
+                "Runs and strike rate in each match",
+                "Player's runs contribution in a chosen match and against the whole team",
+                "Bowling KPIs: total wickets, overs bowled, economy rate and bowling consistency",
+                "Wickets and economy rate in each match",
+                "Player's wickets contribution in a chosen match and against the whole team",
+            ])
+
+            about_block("📋 Summary Analysis", [
+                "Team runs and wickets in each match",
+                "Top performer KPI cards: top run scorer, top wicket taker, best strike rate and best economy rate",
+                "Automated team performance summary with the strongest roles, batting order and the phase where most wickets were lost",
             ])
 
         with st.expander("🔄 Recent Updates", expanded=False):
