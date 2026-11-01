@@ -15,7 +15,7 @@ Cricket is played at every level, but advanced performance analytics is availabl
 - **Gully cricket** and friendly matches
 - **Turf tournaments** and local leagues
 - **Inter-school** and **inter-college** tournaments
-- **Small tournaments**, including district-level and state-level competitions
+- **Small tournaments**, including district-level and some state-level competitions
 
 In these settings, players, coaches and associations usually have no access to advanced, costly cricket analytics tools. Performance is judged by memory, personal observation and a quick look at the scorecard. This creates several problems:
 
