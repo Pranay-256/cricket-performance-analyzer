@@ -285,6 +285,18 @@ strong { color: var(--text-primary) !important; font-family: 'Rajdhani', sans-se
 a { color: var(--teal) !important; text-decoration: none; }
 a:hover { text-decoration: underline; color: var(--gold-light) !important; }
 
+/* ── Header links (Tutorial / Documentation) ─────────────── */
+a.header-link {
+    color: #e0c070 !important;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+a.header-link:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
 /* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-base); }
@@ -339,6 +351,12 @@ SIDE_W, SIDE_H = 10, 4      # side-by-side (summary)
 
 DESC_STYLE = ("font-family:'Rajdhani',sans-serif; font-size:14px; color:#8b949e; "
               "line-height:1.6;")
+
+# ─────────────────────────────────────────────────────────────
+# EXTERNAL LINKS (header)
+# ─────────────────────────────────────────────────────────────
+TUTORIAL_URL      = "https://youtu.be/ltyEYDIfNWo"
+DOCUMENTATION_URL = "https://github.com/Pranay-256/cricket-performance-analyzer"
 
 # ─────────────────────────────────────────────────────────────
 # UI HELPERS
@@ -472,7 +490,7 @@ def about_block(title, items, title_size=17, item_size=14, item_prefix="▸ &nbs
 
 
 def render_header():
-    st.markdown("""
+    st.markdown(f"""
     <div style="text-align:center; padding:24px 0 6px 0;">
         <h1 style="font-family:'Rajdhani',sans-serif; font-weight:700;
                    font-size:38px; color:#e0c070; margin:0; letter-spacing:1px;">
@@ -481,6 +499,14 @@ def render_header():
         <p style="font-family:'Rajdhani',sans-serif; font-size:16px;
                   color:#8b949e; margin:6px 0 0 0;">
             Data-Driven Analysis of Your Cricket Team Performance (currently only supports T-20 Format)
+        </p>
+        <p style="font-family:'Rajdhani',sans-serif; font-size:16px;
+                  color:#8b949e; margin:10px 0 0 0;">
+            <a href="{TUTORIAL_URL}" target="_blank" rel="noopener noreferrer"
+               class="header-link">🎬 Watch Tutorial</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="{DOCUMENTATION_URL}" target="_blank" rel="noopener noreferrer"
+               class="header-link">📚 See Documentation</a>
         </p>
     </div>
     """, unsafe_allow_html=True)
